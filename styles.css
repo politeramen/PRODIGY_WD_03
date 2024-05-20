@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    color: #d1d1d1;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    color: #0abdc6;
+    text-shadow: 0 0 5px #0abdc6, 0 0 10px #0abdc6;
+    margin-bottom: 10px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px auto;
+    width: max-content;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(145deg, #2e2e2e, #1a1a1a);
+    border: 2px solid #0abdc6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #0abdc6;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, color 0.3s;
+}
+
+.cell:hover {
+    background: #0abdc6;
+    color: #1a1a1a;
+    transform: scale(1.1);
+}
+
+.x {
+    color: #ff007c;
+}
+
+.o {
+    color: #0abdc6;
+}
+
+.winning-message {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #ff007c;
+    text-shadow: 0 0 5px #ff007c, 0 0 10px #ff007c;
+}
+
+.hidden {
+    display: none;
+}
+
+.turn-indicator {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #0abdc6;
+    text-shadow: 0 0 5px #0abdc6;
+}
+
+.c-button {
+    background: linear-gradient(145deg, #2e2e2e, #1a1a1a);
+    color: #0abdc6;
+    border: 2px solid #0abdc6;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 0 10px #0abdc6, 0 0 20px #0abdc6, 0 0 30px #0abdc6;
+}
+
+.c-button:hover {
+    background: #0abdc6;
+    color: #1a1a1a;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #0abdc6, 0 0 30px #0abdc6, 0 0 40px #0abdc6;
+}
+
+.c-select {
+    background: linear-gradient(145deg, #2e2e2e, #1a1a1a);
+    color: #0abdc6;
+    border: 2px solid #0abdc6;
+    padding: 10px;
+    font-size: 1em;
+    margin: 10px 0;
+    transition: all 0.3s;
+    box-shadow: 0 0 10px #0abdc6, 0 0 20px #0abdc6, 0 0 30px #0abdc6;
+}
+
+.c-select::after {
+    content: '\25BC'; 
+    font-size: 0.8em;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.c-select:hover,
+.c-select:focus {
+    background: #0abdc6;
+    color: #1a1a1a;
+    box-shadow: 0 0 10px #0abdc6, 0 0 30px #0abdc6, 0 0 40px #0abdc6;
+}
+
+.c-select option {
+    background-color: #2e2e2e;
+    color: #0abdc6;
+    border: none;
+    padding: 10px;
+}
+
